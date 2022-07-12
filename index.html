@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Changing Text</title>
+
+      <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        
+        div {
+            width: 100%;
+            height: 40px;
+            background: rgb(27, 11, 11);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: medium;
+            font-size: 1.25rem;
+            margin: 0;
+        }
+    </style>
+   </head>
+
+   <body onload = "startTimer()">
+       <div id="demo"></div>
+   </body>
+
+   <script type = "text/javascript">
+    function displayNextImage() {
+        x = (x === text.length - 1) ? 0 : x + 1;
+        document.getElementById("demo").innerHTML = text[x];
+    }
+
+ 
+    function startTimer() {
+        setInterval(displayNextImage, 2000);
+    }
+
+    var text = ["Hello","Good Morning","I am Yugendra Ray"], x = -1;
+    
+</script>
+</html>
